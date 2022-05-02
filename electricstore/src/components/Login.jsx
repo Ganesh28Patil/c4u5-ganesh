@@ -16,9 +16,9 @@ export const Login = () => {
   })
  
   // const dispatch =useDispatch()
- 
- 
- 
+
+ let res;
+
   const handlelogin=()=>{
    
     const payload={
@@ -26,8 +26,36 @@ export const Login = () => {
       username,
       password
     }
-    console.log('payload:', payload)
-   
+    console.log('payload:', payload);
+
+    // fetch("http://localhost:8080/users", {
+    //   method: "POST",
+    //   body: JSON.stringify(user),
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    // })
+    // .then((res) => res.json())
+    // .then((res) => console.log(res))
+    // .catch((er) => {
+    //   console.log(er);
+    // });
+    fetch("http://localhost:8080/users", {
+      method: "GET",
+      //body: JSON.stringify(user),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+    .then((res) => res.json())
+    .then((res) => console.log("res",res))
+    .catch((er) => {
+      console.log(er);
+    });
+    
+   for(let i = 0; i < res.length;i++){
+     console.log(res[i]);
+   }
     // dispatch(loginthunk(payload))
    
   }

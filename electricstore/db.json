@@ -23,6 +23,21 @@
       "username": "Adam Smith",
       "pass": "5555",
       "role": "client"
+    },
+    {
+      "username": "",
+      "password": "",
+      "id": 5
+    },
+    {
+      "username": "",
+      "password": "",
+      "id": 6
+    },
+    {
+      "username": "",
+      "password": "",
+      "id": 7
     }
   ],
   "orders": [
